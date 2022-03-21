@@ -1,0 +1,1 @@
+read pointers and arrays
