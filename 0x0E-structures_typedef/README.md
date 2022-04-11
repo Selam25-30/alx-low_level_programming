@@ -1,0 +1,1 @@
+This is ALX project on 0x0E. C - Structures, typedef
