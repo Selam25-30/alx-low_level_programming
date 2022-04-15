@@ -21,25 +21,3 @@ int sum_them_all(const unsigned int n, ...)
 
 	return (sum);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--UUU:----F1  0-sum_them_all.c   All L1     (C/*l WS Abbrev) --------------------
-(New file)
