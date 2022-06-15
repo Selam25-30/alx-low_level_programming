@@ -94,3 +94,66 @@ int f2(char *name, int len)
  */
 int f3(char *name, int len)
 {
+	int ret = 1;
+	int i = 0;
+
+	for (; i < len; i++)
+		ret *= name[i];
+
+	return ((ret ^ 0x55) & 0x3f);
+}
+
+/**
+ * f4 - function for 4th char
+ * @name: the user name
+ * @len: length of name
+ *
+ * Return: encoded char
+ */
+int f4(char *name, int len)
+{
+	int ret = name[0];
+	int i = 0;
+
+	for (; i < len; i++)
+		if (name[i] > ret)
+			ret = name[i];
+
+	srand(ret ^ 0xe);
+	return (rand() & 0x3f);
+}
+
+/**
+ * f5 - function for 5th char
+ * @name: the user name
+ * @len: length of name
+ *
+ * Return: encoded char
+ */
+int f5(char *name, int len)
+{
+	int ret = 0;
+	int i = 0;
+
+	for (; i < len; i++)
+		ret += name[i] * name[i];
+
+	return ((ret ^ 0xef) & 0x3f);
+}
+
+/**
+ * f6 - function for 6th char
+ * @c: first char of user name
+ *
+ * Return: encoded char
+ */
+int f6(char c)
+{
+	int ret = 0;
+	int i = 0;
+
+	for (; c > i; i++)
+		ret = rand();
+
+	return ((ret ^ 0xe5) & 0x3f);
+}
